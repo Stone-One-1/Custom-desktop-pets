@@ -14,9 +14,9 @@ Customize your desktop pets. You can upload your own little cats and dogs as des
 ## 下载与运行
 
 ### 方式一：直接运行（无需安装）推荐！
-1. 从 [Releases](../../releases) 下载 `CatPet.zip`
+1. 从 [Releases](../../releases) 下载 `DesktopPet.zip`
 2. 解压到任意文件夹
-3. 双击 `CatPet.exe` 启动
+3. 双击 `DesktopPet.exe` 启动
 4. 托盘区会出现猫爪图标，右键可打开菜单
 ### 方式二：从源码运行
 ```bash
