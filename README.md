@@ -11,3 +11,10 @@ Customize your desktop pets. You can upload your own little cats and dogs as des
 - 📦 **绿色便携**：所有数据保存在程序同目录下的 `CatPet_Data` 文件夹，配置即打包，分享即用。
 - 💾 **完整记忆**：皮肤、位置、开关状态、速度、缩放等全部自动保存。
 - 🎮 **游戏模式**：检测到全屏应用（游戏/视频）时自动暂停行走，不打扰。
+## 下载与运行
+
+### 直接运行（无需安装）
+1. 从 [Releases](../../releases) 下载 `CatPet.zip`
+2. 解压到任意文件夹
+3. 双击 `CatPet.exe` 启动
+4. 托盘区会出现猫爪图标，右键可打开菜单
