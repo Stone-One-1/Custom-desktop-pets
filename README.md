@@ -24,7 +24,10 @@ git clone https://github.com/EagleVast/Custom-desktio-pets.git
 cd Custom-desktio-pets
 pip install PyQt5 pywin32 Pillow
 python desktop_pet.py
+```
 自行打包为 EXE
-```bash
+```
 pip install pyinstaller
 pyinstaller --onefile --windowed --name=CatPet --icon=a.ico desktop_pet.py
+```
+## 使用指南
