@@ -59,3 +59,68 @@ pyinstaller --onefile --windowed --name=CatPet --icon=a.ico desktop_pet.py
 - 缩放
 
 在设置窗口中调整宠物大小（50%–200%），保持原始宽高比。
+### 设置窗口
+通过托盘菜单 → “设置” 打开，包含以下标签页：
+<img width="800" height="284" alt="image" src="https://github.com/user-attachments/assets/e9a25530-18c4-4ee6-9919-27962678c358" />
+
+## 文件结构(便携式)
+```text
+DesktopPet.exe
+CatPet_Data/
+├── config.ini          # 全局配置（位置、速度、皮肤名等）
+├── random_anims.json   # 随机动画列表
+├── skins/              # 所有皮肤文件夹
+│   ├── default/        # 默认皮肤（红色方块示例）
+│   └── 你添加的皮肤/
+└── logs/               # 错误日志
+```
+## 如何将自己的配置分享给其他人
+将 DesktopPet.exe 与同目录下的 CatPet_Data 文件夹一起压缩成 zip（例如 DesktopPet_我的配置.zip），发送给朋友。对方解压后直接运行 exe 即可看到您设置好的所有内容。
+## 常见问题
+### ❓ 为什么皮肤加载失败？
+- GIF 文件可能过大（超过 100 帧或宽度超过 200px），程序会自动压缩，但仍建议使用短小 GIF。
+- 确保 GIF 是有效的动画文件。
+
+---
+
+### ❌ 程序崩溃怎么办？
+- 查看 `CatPet_Data/logs/error.log`，获取详细错误信息。可提交 Issue 附上日志内容。
+
+---
+
+### 🚪 如何完全退出程序？
+- 右键托盘图标 → “退出”。关闭窗口仅隐藏到托盘。
+
+---
+
+### ⏰ 开机自启不生效？
+- 某些安全软件可能拦截注册表操作。可以手动将 `DesktopPet.exe` 的快捷方式放入 `shell:startup` 文件夹。
+
+---
+
+### 📦 为什么我配置好的设置发给别人后不见了？
+- 您必须将 `CatPet_Data` 文件夹一起打包。单独发送 exe 只会生成默认配置。
+## 开发依赖
+Python 3.8+<br>
+PyQt5<br>
+pywin32<br>
+Pillow
+## 贡献与反馈
+欢迎提交 Issue 或 Pull Request。如果有有趣的 GIF 皮肤，也欢迎分享！<br>
+Enjoy your digital pet! 🐾
+
+## GIF制作参考
+```text
+GIF简单制作流程：
+	静态GIF：
+		jpg裁剪后导入抠图为png，修改后缀为gif
+	动态GIF：
+		视频裁剪后进行gif裁剪，裁掉多余的背景然后导入转为gif(建议360p+10帧)，最后gif抠图去掉背景即可
+
+免登录修图网站：
+	GIF裁剪：https://tool.lu/gifcropper/
+	GIF抠图：https://adworker.ai/zh/tools/gif-background-remover/
+	视频转GIF：https://converttool.org/zh-cn/video-tools/video-to-gif
+	抠png：https://koukoukou.cn/(免费三张，做静态够用了)
+		以上网址均为网上寻找，真假自辩，仅做分享，谨防上当受骗！
+```
